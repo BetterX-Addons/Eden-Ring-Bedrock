@@ -15,7 +15,8 @@
             },
             "scripts": {
                 "pre_animation": [
-                    "v.life_time = q.life_time;"
+                    "v.life_time = q.life_time;",
+                    "v.uv_anim = math.mod((v.life_time * 1), 2) / 2;"
                 ]
             },
             "render_controllers": [

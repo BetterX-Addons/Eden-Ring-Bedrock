@@ -17,7 +17,7 @@
             "uv_anim": {
                 "offset": [
                     0,
-                    "math.mod((q.life_time * 1), 3) / 3"
+                    "v.uv_anim"
                 ],
                 "scale": [
                     1,
