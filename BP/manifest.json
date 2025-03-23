@@ -1,0 +1,43 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Eden Ring Bedrock BP",
+        "description": "By Halo333X and ElCordero",
+        "uuid": "60d174ed-08fc-4499-8507-7ae06d86e9dd",
+        "version": [
+            1,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            20
+        ]
+    },
+    "modules": [
+        {
+            "type": "script",
+            "uuid": "8cfbff12-d3a3-48c9-a220-4ef41073e403",
+            "entry": "scripts/index.js",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "capabilities": [
+        "script_eval"
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.17.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "1.3.0"
+        }
+    ]
+}
