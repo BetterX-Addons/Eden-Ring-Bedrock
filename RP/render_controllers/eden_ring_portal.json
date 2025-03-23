@@ -5,12 +5,25 @@
             "materials": [
                 {
                     "*": "material.default"
+                },
+                {
+                    "*": "material.animated"
                 }
             ],
             "geometry": "geometry.default",
             "textures": [
                 "texture.default"
-            ]
+            ],
+            "uv_anim": {
+                "offset": [
+                    0,
+                    "math.mod((q.life_time * 1), 3) / 3"
+                ],
+                "scale": [
+                    1,
+                    "1 / 2"
+                ]
+            }
         }
     }
 }

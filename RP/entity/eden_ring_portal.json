@@ -4,7 +4,8 @@
         "description": {
             "identifier": "edenring:portal",
             "materials": {
-                "default": "slime_outer"
+                "default": "slime_outer",
+                "animated": "custom_animated"
             },
             "textures": {
                 "default": "textures/entity/portal/portal_ray_deep"
