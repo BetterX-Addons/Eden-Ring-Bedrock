@@ -1,0 +1,25 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "edenring:portal",
+            "materials": {
+                "default": "slime_outer"
+            },
+            "textures": {
+                "default": "textures/entity/portal/portal_ray_deep"
+            },
+            "geometry": {
+                "default": "geometry.eden_ring_portal"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.life_time = q.life_time;"
+                ]
+            },
+            "render_controllers": [
+                "controller.render.eden_ring_portal"
+            ]
+        }
+    }
+}

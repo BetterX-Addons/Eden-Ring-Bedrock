@@ -1,0 +1,16 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.eden_ring_portal": {
+            "materials": [
+                {
+                    "*": "material.default"
+                }
+            ],
+            "geometry": "geometry.default",
+            "textures": [
+                "texture.default"
+            ]
+        }
+    }
+}
