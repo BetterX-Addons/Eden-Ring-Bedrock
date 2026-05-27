@@ -1,0 +1,28 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Eden Ring RP",
+    "description": "By BetterX Addons",
+    "min_engine_version": [ 1, 26, 30 ],
+    "pack_scope": "world",
+    "uuid": "dbf2bed2-32ce-4bca-9843-7cadfaddb724",
+    "version": [ 1, 0, 0 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "1dd7a605-7bd9-4cfa-8af5-557769b13061",
+      "version": [ 1, 0, 0 ]
+    }
+ ],
+ "dependencies": [
+    {
+      "uuid": "1bcc4604-db20-49e1-9205-5b4375fc198a",
+      "version": [ 1, 0, 0 ]
+    }
+  ],
+  "capabilities": [ "pbr" ],
+  "metadata": {
+    "product_type": "addon"
+  }
+}
