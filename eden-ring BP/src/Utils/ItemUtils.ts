@@ -1,4 +1,10 @@
-import { Block, Dimension, Entity, ItemStack, Vector3, Direction } from "@minecraft/server";
+import {
+  Block,
+  Entity,
+  ItemStack,
+  Vector3,
+  Direction,
+} from "@minecraft/server";
 
 export default class ItemUtils {
     private itemStack: ItemStack;
@@ -13,155 +19,63 @@ export default class ItemUtils {
     }
 
     flintOpenPortal() {
-        if (this.typeId === 'minecraft:flint_and_steel') {
-            if (this.block?.typeId === 'minecraft:gold_block') {
-                const { location: loc, dimension } = this.block;
-                const portal: { typeId: string, vector: Vector3 }[] = [
-                    // Waxed Copper Block
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x, y: loc.y, z: loc.z + 1 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x, y: loc.y, z: loc.z - 1 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x + 1, y: loc.y, z: loc.z }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x - 1, y: loc.y, z: loc.z }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x + 1, y: loc.y, z: loc.z + 1 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x - 1, y: loc.y, z: loc.z - 1 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x - 1, y: loc.y, z: loc.z + 1 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x + 1, y: loc.y, z: loc.z - 1 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x + 2, y: loc.y, z: loc.z + 2 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x + 2, y: loc.y, z: loc.z - 2 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x - 2, y: loc.y, z: loc.z + 2 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_copper',
-                        vector: { x: loc.x - 2, y: loc.y, z: loc.z - 2 }
-                    },
-                    // Waxed Copper Stairs
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x + 2, y: loc.y, z: loc.z + 1 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x + 2, y: loc.y, z: loc.z }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x + 2, y: loc.y, z: loc.z - 1 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x - 2, y: loc.y, z: loc.z + 1 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x - 2, y: loc.y, z: loc.z }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x - 2, y: loc.y, z: loc.z - 1 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x + 1, y: loc.y, z: loc.z + 2 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x, y: loc.y, z: loc.z + 2 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x - 1, y: loc.y, z: loc.z + 2 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x + 1, y: loc.y, z: loc.z - 2 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x, y: loc.y, z: loc.z - 2 }
-                    },
-                    {
-                        typeId: 'minecraft:waxed_cut_copper_stairs',
-                        vector: { x: loc.x - 1, y: loc.y, z: loc.z - 2 }
-                    },
-                    // Amethyst Block
-                    {
-                        typeId: 'minecraft:amethyst_block',
-                        vector: { x: loc.x + 2, y: loc.y + 1, z: loc.z + 2 }
-                    },
-                    {
-                        typeId: 'minecraft:amethyst_block',
-                        vector: { x: loc.x + 2, y: loc.y + 1, z: loc.z - 2 }
-                    },
-                    {
-                        typeId: 'minecraft:amethyst_block',
-                        vector: { x: loc.x - 2, y: loc.y + 1, z: loc.z + 2 }
-                    },
-                    {
-                        typeId: 'minecraft:amethyst_block',
-                        vector: { x: loc.x - 2, y: loc.y + 1, z: loc.z - 2 }
-                    },
-                    // Amethyst Cluster
-                    {
-                        typeId: 'minecraft:amethyst_cluster',
-                        vector: { x: loc.x + 2, y: loc.y + 2, z: loc.z + 2 }
-                    },
-                    {
-                        typeId: 'minecraft:amethyst_cluster',
-                        vector: { x: loc.x + 2, y: loc.y + 2, z: loc.z - 2 }
-                    },
-                    {
-                        typeId: 'minecraft:amethyst_cluster',
-                        vector: { x: loc.x - 2, y: loc.y + 2, z: loc.z + 2 }
-                    },
-                    {
-                        typeId: 'minecraft:amethyst_cluster',
-                        vector: { x: loc.x - 2, y: loc.y + 2, z: loc.z - 2 }
-                    },
-                ];
-                const validations: boolean[] = [];
-                for (let i = 0; i < portal.length; i++) {
-                    const targetBlock = dimension.getBlock(portal[i].vector);
-                    if (targetBlock.typeId === portal[i].typeId) validations.push(true);
-                    else validations.push(false);
-                }
-                if (validations.every(e => e === true)) {
-                    const up = { x: loc.x + 0.5, y: loc.y + 1, z: loc.z + 0.5 };
-                    dimension.setBlockType(up, 'air');
-                    dimension.spawnEntity('edenring:portal', up);
-                }
-            }
+        if (this.block?.typeId !== "minecraft:gold_block") return;
+
+        const { location: loc, dimension } = this.block;
+
+        const validatePortal = (offsets: Array<[number, number, number, string]>) =>
+        offsets.every(
+        ([x, y, z, type]) =>
+            dimension.getBlock({
+            x: loc.x + x,
+            y: loc.y + y,
+            z: loc.z + z,
+            })?.typeId === type,
+        );
+
+        const offsets = [
+            // Waxed copper (nivel 0)
+            [0, 0, 1, "minecraft:waxed_copper"],
+            [0, 0, -1, "minecraft:waxed_copper"],
+            [1, 0, 0, "minecraft:waxed_copper"],
+            [-1, 0, 0, "minecraft:waxed_copper"],
+            [1, 0, 1, "minecraft:waxed_copper"],
+            [-1, 0, -1, "minecraft:waxed_copper"],
+            [-1, 0, 1, "minecraft:waxed_copper"],
+            [1, 0, -1, "minecraft:waxed_copper"],
+            [2, 0, 2, "minecraft:waxed_copper"],
+            [2, 0, -2, "minecraft:waxed_copper"],
+            [-2, 0, 2, "minecraft:waxed_copper"],
+            [-2, 0, -2, "minecraft:waxed_copper"],
+            // Waxed copper stairs (nivel 0)
+            [2, 0, 1, "minecraft:waxed_cut_copper_stairs"],
+            [2, 0, 0, "minecraft:waxed_cut_copper_stairs"],
+            [2, 0, -1, "minecraft:waxed_cut_copper_stairs"],
+            [-2, 0, 1, "minecraft:waxed_cut_copper_stairs"],
+            [-2, 0, 0, "minecraft:waxed_cut_copper_stairs"],
+            [-2, 0, -1, "minecraft:waxed_cut_copper_stairs"],
+            [1, 0, 2, "minecraft:waxed_cut_copper_stairs"],
+            [0, 0, 2, "minecraft:waxed_cut_copper_stairs"],
+            [-1, 0, 2, "minecraft:waxed_cut_copper_stairs"],
+            [1, 0, -2, "minecraft:waxed_cut_copper_stairs"],
+            [0, 0, -2, "minecraft:waxed_cut_copper_stairs"],
+            [-1, 0, -2, "minecraft:waxed_cut_copper_stairs"],
+            // Amethyst blocks (nivel +1)
+            [2, 1, 2, "minecraft:amethyst_block"],
+            [2, 1, -2, "minecraft:amethyst_block"],
+            [-2, 1, 2, "minecraft:amethyst_block"],
+            [-2, 1, -2, "minecraft:amethyst_block"],
+            // Amethyst clusters (nivel +2)
+            [2, 2, 2, "minecraft:amethyst_cluster"],
+            [2, 2, -2, "minecraft:amethyst_cluster"],
+            [-2, 2, 2, "minecraft:amethyst_cluster"],
+            [-2, 2, -2, "minecraft:amethyst_cluster"],
+        ];
+
+        if (validatePortal(offsets)) {
+            const up = { x: loc.x + 0.5, y: loc.y + 1, z: loc.z + 0.5 };
+            dimension.setBlockType(up, "air");
+            dimension.spawnEntity("edenring:portal", up);
         }
     }
 }
