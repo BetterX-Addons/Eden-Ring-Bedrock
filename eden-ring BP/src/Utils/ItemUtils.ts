@@ -74,7 +74,7 @@ export default class ItemUtils {
         if (validatePortal(offsets)) {
             const up = { x: loc.x + 0.5, y: loc.y + 1, z: loc.z + 0.5 };
             dimension.setBlockType(up, "air");
-            dimension.spawnEntity("edenring:portal", up);
+            dimension.spawnEntity("eden_ring:portal", up);
         }
     }
 }

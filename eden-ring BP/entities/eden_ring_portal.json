@@ -2,7 +2,7 @@
     "format_version": "1.19.0",
     "minecraft:entity": {
         "description": {
-            "identifier": "edenring:portal",
+            "identifier": "eden_ring:portal",
             "is_spawnable": false,
             "is_summonable": true
         },

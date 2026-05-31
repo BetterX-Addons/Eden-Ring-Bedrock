@@ -1,4 +1,4 @@
-import { world, system, Direction, CustomCommand, CommandPermissionLevel } from "@minecraft/server";
+import { world, system, Direction, CustomCommand, CommandPermissionLevel, CustomCommandParamType, CustomCommandOrigin, CustomCommandResult, CustomCommandStatus } from "@minecraft/server";
 import PlayerUtils from "./Utils/PlayerUtils";
 import ItemUtils from "./Utils/ItemUtils";
 
@@ -13,7 +13,11 @@ import { EdenRing } from "./constants/EdenRing";
 // ==========================================
 
 system.beforeEvents.startup.subscribe(e => {
-    // Dev Commands
+    // ==========================================
+    // DEV COMMANDS
+    // ==========================================
+
+    // Despawn Command
     const despawnCommand: CustomCommand = { name: 'eden_ring:despawn_all', description: "Despawn All Entities", permissionLevel: CommandPermissionLevel.Admin }
     e.customCommandRegistry.registerCommand(despawnCommand, e => {
         system.run(() => {
@@ -24,9 +28,28 @@ system.beforeEvents.startup.subscribe(e => {
         });
     });
 
+    // Teleport to Dimension
+    const dimensionEnums: string[] = [ "overworld", "nether", "the_end", EdenRing.dimension ];
+    const teleportCommand: CustomCommand = { name: 'eden_ring:teleport_to', description: "Teleport to another dimension", permissionLevel: CommandPermissionLevel.Admin, mandatoryParameters: [ { type: CustomCommandParamType.Enum, name: EdenRing.dimension } ] }
+    e.customCommandRegistry.registerEnum(EdenRing.dimension, dimensionEnums);
+    e.customCommandRegistry.registerCommand(teleportCommand, switchDimensionsCommand);
+
+    function switchDimensionsCommand(origin: CustomCommandOrigin, dimensionId: string): CustomCommandResult {
+        const entity = origin.sourceEntity;
+        if (!entity) return { status: CustomCommandStatus.Failure, message: "No entity found" };
+
+        system.run(() => {
+            entity.teleport(entity.location, { dimension: world.getDimension(dimensionId) });
+        });
+
+        return {
+            status: CustomCommandStatus.Success,
+            message: `Teleported to ${dimensionId}`,
+        };
+    }
 
     // Eden Ring Dimension
-    e.dimensionRegistry.registerCustomDimension(EdenRing.dimension)
+    e.dimensionRegistry.registerCustomDimension(EdenRing.dimension);
 });
 
 // ==========================================
@@ -35,7 +58,8 @@ system.beforeEvents.startup.subscribe(e => {
 
 system.runInterval(() => {
     for (const player of world.getPlayers()) {
-
+        const utils = new PlayerUtils(player);
+        utils.teleportToEdenRing();
     }
 });
 

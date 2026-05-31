@@ -6,26 +6,17 @@ export default class PlayerUtils {
         this.dimension = player.dimension;
         this.location = player.location;
     }
-    teleportingToEdenRing() {
-        // Need to be 5 secs
-        const isInPortal = this.dimension.getBlock(this.location)?.typeId === EdenRing.portal;
-        if (isInPortal) {
-            const time = this.player.getDynamicProperty('eden_ring:time_teleporting') || 0;
-            if (time >= 100) {
-            }
-            else
-                this.player.setDynamicProperty('', time + 1);
-        }
-        else {
-        }
-    }
     teleportToEdenRing() {
-        const { location: loc, dimension: dim } = this.player;
-        if (dim.id === 'minecraft:overworld' || dim.id === 'minecraft:nether' || dim.id === 'minecraft:the_end') {
-            this.player.teleport(this.player.location, { dimension: world.getDimension(EdenRing.dimension) });
+        const isInPortal = this.dimension.getEntities({ type: EdenRing.portal, location: this.location, maxDistance: 1 });
+        if (isInPortal.length > 0) {
+            const recentlyTeleported = this.player.getDynamicProperty(EdenRing.recently_teleported);
+            if (recentlyTeleported)
+                return;
+            else
+                this.player.teleport(this.location, { dimension: world.getDimension(EdenRing.dimension) });
         }
         else {
-            this.player.teleport(this.player.location, { dimension: world.getDimension('overworld') });
+            this.player.setDynamicProperty(EdenRing.recently_teleported, false);
         }
     }
 }
