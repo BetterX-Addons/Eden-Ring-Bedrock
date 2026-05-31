@@ -1,0 +1,408 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.eden_ring_portal_15",
+                "texture_width": 32,
+                "texture_height": 48,
+                "visible_bounds_width": 4,
+                "visible_bounds_height": 4.5,
+                "visible_bounds_offset": [
+                    0,
+                    1.75,
+                    0
+                ]
+            },
+            "bones": [
+                {
+                    "name": "panel1",
+                    "pivot": [
+                        0,
+                        30,
+                        0
+                    ]
+                },
+                {
+                    "name": "trans15",
+                    "parent": "panel1",
+                    "pivot": [
+                        0,
+                        32,
+                        0
+                    ],
+                    "cubes": [
+                        {
+                            "origin": [
+                                -16,
+                                46,
+                                -16
+                            ],
+                            "size": [
+                                32,
+                                1,
+                                0
+                            ],
+                            "uv": {
+                                "north": {
+                                    "uv": [
+                                        32,
+                                        1
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        1
+                                    ]
+                                },
+                                "east": {
+                                    "uv": [
+                                        0,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        0,
+                                        45
+                                    ]
+                                },
+                                "south": {
+                                    "uv": [
+                                        0,
+                                        1
+                                    ],
+                                    "uv_size": [
+                                        32,
+                                        1
+                                    ]
+                                },
+                                "west": {
+                                    "uv": [
+                                        25,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        0,
+                                        45
+                                    ]
+                                },
+                                "up": {
+                                    "uv": [
+                                        32,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        0
+                                    ]
+                                },
+                                "down": {
+                                    "uv": [
+                                        32,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        0
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "panel2",
+                    "pivot": [
+                        0,
+                        30,
+                        0
+                    ],
+                    "rotation": [
+                        0,
+                        -90,
+                        0
+                    ]
+                },
+                {
+                    "name": "trans31",
+                    "parent": "panel2",
+                    "pivot": [
+                        0,
+                        32,
+                        0
+                    ],
+                    "cubes": [
+                        {
+                            "origin": [
+                                -16,
+                                46,
+                                -16
+                            ],
+                            "size": [
+                                32,
+                                1,
+                                0
+                            ],
+                            "uv": {
+                                "north": {
+                                    "uv": [
+                                        32,
+                                        1
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        1
+                                    ]
+                                },
+                                "east": {
+                                    "uv": [
+                                        0,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        0,
+                                        45
+                                    ]
+                                },
+                                "south": {
+                                    "uv": [
+                                        0,
+                                        1
+                                    ],
+                                    "uv_size": [
+                                        32,
+                                        1
+                                    ]
+                                },
+                                "west": {
+                                    "uv": [
+                                        25,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        0,
+                                        45
+                                    ]
+                                },
+                                "up": {
+                                    "uv": [
+                                        32,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        0
+                                    ]
+                                },
+                                "down": {
+                                    "uv": [
+                                        32,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        0
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "panel3",
+                    "pivot": [
+                        0,
+                        30,
+                        0
+                    ],
+                    "rotation": [
+                        0,
+                        180,
+                        0
+                    ]
+                },
+                {
+                    "name": "trans47",
+                    "parent": "panel3",
+                    "pivot": [
+                        0,
+                        32,
+                        0
+                    ],
+                    "cubes": [
+                        {
+                            "origin": [
+                                -16,
+                                46,
+                                -16
+                            ],
+                            "size": [
+                                32,
+                                1,
+                                0
+                            ],
+                            "uv": {
+                                "north": {
+                                    "uv": [
+                                        32,
+                                        1
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        1
+                                    ]
+                                },
+                                "east": {
+                                    "uv": [
+                                        0,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        0,
+                                        45
+                                    ]
+                                },
+                                "south": {
+                                    "uv": [
+                                        0,
+                                        1
+                                    ],
+                                    "uv_size": [
+                                        32,
+                                        1
+                                    ]
+                                },
+                                "west": {
+                                    "uv": [
+                                        25,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        0,
+                                        45
+                                    ]
+                                },
+                                "up": {
+                                    "uv": [
+                                        32,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        0
+                                    ]
+                                },
+                                "down": {
+                                    "uv": [
+                                        32,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        0
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "panel4",
+                    "pivot": [
+                        0,
+                        30,
+                        0
+                    ],
+                    "rotation": [
+                        0,
+                        90,
+                        0
+                    ]
+                },
+                {
+                    "name": "trans63",
+                    "parent": "panel4",
+                    "pivot": [
+                        0,
+                        32,
+                        0
+                    ],
+                    "cubes": [
+                        {
+                            "origin": [
+                                -16,
+                                46,
+                                -16
+                            ],
+                            "size": [
+                                32,
+                                1,
+                                0
+                            ],
+                            "uv": {
+                                "north": {
+                                    "uv": [
+                                        32,
+                                        1
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        1
+                                    ]
+                                },
+                                "east": {
+                                    "uv": [
+                                        0,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        0,
+                                        45
+                                    ]
+                                },
+                                "south": {
+                                    "uv": [
+                                        0,
+                                        1
+                                    ],
+                                    "uv_size": [
+                                        32,
+                                        1
+                                    ]
+                                },
+                                "west": {
+                                    "uv": [
+                                        25,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        0,
+                                        45
+                                    ]
+                                },
+                                "up": {
+                                    "uv": [
+                                        32,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        0
+                                    ]
+                                },
+                                "down": {
+                                    "uv": [
+                                        32,
+                                        2
+                                    ],
+                                    "uv_size": [
+                                        -32,
+                                        0
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

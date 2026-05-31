@@ -1,39 +1,23 @@
-import {
-  Block,
-  Entity,
-  ItemStack,
-  Vector3,
-  Direction,
-} from "@minecraft/server";
-
 export default class ItemUtils {
-    private itemStack: ItemStack;
-    private source?: Entity;
-    private block?: Block;
-    private typeId: string;
-    constructor(itemStack: ItemStack, source?: Entity, block?: Block) {
+    constructor(itemStack, source, block) {
         this.itemStack = itemStack;
         this.source = source;
         this.block = block;
         this.typeId = itemStack.typeId;
     }
-
     flintOpenPortal() {
-        if (this.block?.typeId !== "minecraft:gold_block") return;
+        if (this.block?.typeId !== "minecraft:gold_block")
+            return;
         const { location: loc, dimension } = this.block;
-        const portalEntity = dimension.getEntities({ maxDistance: 2, location: loc, type: "edenring:portal" })
-        if (portalEntity.length > 0) return;
-        console.warn(portalEntity.length)
-        const validatePortal = (offsets: Array<[number, number, number, string]>) =>
-        offsets.every(
-        ([x, y, z, type]) =>
-            dimension.getBlock({
+        const portalEntity = dimension.getEntities({ maxDistance: 2, location: loc, type: "edenring:portal" });
+        if (portalEntity.length > 0)
+            return;
+        console.warn(portalEntity.length);
+        const validatePortal = (offsets) => offsets.every(([x, y, z, type]) => dimension.getBlock({
             x: loc.x + x,
             y: loc.y + y,
             z: loc.z + z,
-            })?.isValid,
-        );
-
+        })?.isValid);
         const offsets = [
             [0, 0, 1, "minecraft:copper_block"],
             [0, 0, -1, "minecraft:copper_block"],
@@ -70,7 +54,6 @@ export default class ItemUtils {
             [-2, 2, 2, "minecraft:amethyst_cluster"],
             [-2, 2, -2, "minecraft:amethyst_cluster"],
         ];
-
         if (validatePortal(offsets)) {
             const up = { x: loc.x + 0.5, y: loc.y + 1, z: loc.z + 0.5 };
             dimension.setBlockType(up, "air");

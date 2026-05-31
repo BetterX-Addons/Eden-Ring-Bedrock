@@ -4,23 +4,66 @@
         "description": {
             "identifier": "edenring:portal",
             "materials": {
-                "default": "slime_outer",
-                "animated": "custom_animated"
+                "default": "eden_ring_portal"
             },
             "textures": {
-                "default": "textures/entity/portal/portal_ray_deep"
+                "default": "textures/entity/portal/portal_ray_deep",
+                "portal_fade1": "textures/entity/portal/portal_fade_1",
+                "portal_fade2": "textures/entity/portal/portal_fade_2",
+                "portal_fade3": "textures/entity/portal/portal_fade_3",
+                "portal_fade4": "textures/entity/portal/portal_fade_4",
+                "portal_fade5": "textures/entity/portal/portal_fade_5",
+                "portal_fade6": "textures/entity/portal/portal_fade_6",
+                "portal_fade7": "textures/entity/portal/portal_fade_7",
+                "portal_fade8": "textures/entity/portal/portal_fade_8",
+                "portal_fade9": "textures/entity/portal/portal_fade_9",
+                "portal_fade10": "textures/entity/portal/portal_fade_10",
+                "portal_fade11": "textures/entity/portal/portal_fade_11",
+                "portal_fade12": "textures/entity/portal/portal_fade_12",
+                "portal_fade13": "textures/entity/portal/portal_fade_13",
+                "portal_fade14": "textures/entity/portal/portal_fade_14",
+                "portal_fade15": "textures/entity/portal/portal_fade_15"
             },
             "geometry": {
-                "default": "geometry.eden_ring_portal"
+                "default": "geometry.eden_ring_portal_only_base",
+                "portal_fade1": "geometry.eden_ring_portal_1",
+                "portal_fade2": "geometry.eden_ring_portal_2",
+                "portal_fade3": "geometry.eden_ring_portal_3",
+                "portal_fade4": "geometry.eden_ring_portal_4",
+                "portal_fade5": "geometry.eden_ring_portal_5",
+                "portal_fade6": "geometry.eden_ring_portal_6",
+                "portal_fade7": "geometry.eden_ring_portal_7",
+                "portal_fade8": "geometry.eden_ring_portal_8",
+                "portal_fade9": "geometry.eden_ring_portal_9",
+                "portal_fade10": "geometry.eden_ring_portal_10",
+                "portal_fade11": "geometry.eden_ring_portal_11",
+                "portal_fade12": "geometry.eden_ring_portal_12",
+                "portal_fade13": "geometry.eden_ring_portal_13",
+                "portal_fade14": "geometry.eden_ring_portal_14",
+                "portal_fade15": "geometry.eden_ring_portal_15"
             },
             "scripts": {
                 "pre_animation": [
-                    "v.life_time = q.life_time;",
-                    "v.uv_anim = math.mod((v.life_time * 1), 2) / 2;"
+                    "v.uv_anim = math.mod(q.life_time * 0.3, 0.5);"
                 ]
             },
             "render_controllers": [
-                "controller.render.eden_ring_portal"
+                "controller.render.eden_ring_portal",
+                "controller.render.eden_ring_portal_1",
+                "controller.render.eden_ring_portal_2",
+                "controller.render.eden_ring_portal_3",
+                "controller.render.eden_ring_portal_4",
+                "controller.render.eden_ring_portal_5",
+                "controller.render.eden_ring_portal_6",
+                "controller.render.eden_ring_portal_7",
+                "controller.render.eden_ring_portal_8",
+                "controller.render.eden_ring_portal_9",
+                "controller.render.eden_ring_portal_10",
+                "controller.render.eden_ring_portal_11",
+                "controller.render.eden_ring_portal_12",
+                "controller.render.eden_ring_portal_13",
+                "controller.render.eden_ring_portal_14",
+                "controller.render.eden_ring_portal_15"
             ]
         }
     }

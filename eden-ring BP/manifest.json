@@ -3,32 +3,27 @@
   "header": {
     "name": "Eden Ring BP",
     "description": "By BetterX Addons",
-    "min_engine_version": [ 1, 26, 30 ],
+    "min_engine_version": [ 1, 26, 21 ],
     "uuid": "1bcc4604-db20-49e1-9205-5b4375fc198a",
     "version": [ 1, 0, 0 ]
   },
   "modules": [
     {
-      "type": "data",
-      "uuid": "fab62e90-6360-49e0-9890-18b4e9bf7119",
-      "version": [ 1, 0, 0 ]
-    },
-    {
       "type": "script",
       "language": "javascript",
       "uuid": "7da05629-82d5-4198-9cb2-b93c4b1b02a4",
-      "entry": "scripts/main.js",
+      "entry": "scripts/index.js",
       "version": [ 1, 0, 0 ]
     }
   ],
   "dependencies": [
     {
-      "uuid": "89669667-5d58-4924-8bee-da64704299c5",
+      "uuid": "dbf2bed2-32ce-4bca-9843-7cadfaddb724",
       "version": [ 1, 0, 0 ]
     },
     {
       "module_name": "@minecraft/server",
-      "version": "2.9.0-beta"
+      "version": "2.8.0-beta"
     },
     {
       "module_name": "@minecraft/server-ui",

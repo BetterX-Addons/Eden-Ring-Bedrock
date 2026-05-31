@@ -3,7 +3,7 @@
   "header": {
     "name": "Eden Ring RP",
     "description": "By BetterX Addons",
-    "min_engine_version": [ 1, 26, 30 ],
+    "min_engine_version": [ 1, 26, 21 ],
     "pack_scope": "world",
     "uuid": "dbf2bed2-32ce-4bca-9843-7cadfaddb724",
     "version": [ 1, 0, 0 ]

@@ -1,0 +1,112 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.eden_ring_portal_only_base",
+				"texture_width": 32,
+				"texture_height": 48,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "panel1",
+					"pivot": [0, 30, 0]
+				},
+				{
+					"name": "trans0",
+					"parent": "panel1",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-16, 0, -16],
+							"size": [32, 32, 0],
+							"uv": {
+								"north": {"uv": [32, 16], "uv_size": [-32, 32]},
+								"east": {"uv": [0, 2], "uv_size": [0, 45]},
+								"south": {"uv": [0, 16], "uv_size": [32, 32]},
+								"west": {"uv": [25, 2], "uv_size": [0, 45]},
+								"up": {"uv": [32, 2], "uv_size": [-32, 0]},
+								"down": {"uv": [32, 2], "uv_size": [-32, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "panel2",
+					"pivot": [0, 30, 0],
+					"rotation": [0, -90, 0]
+				},
+				{
+					"name": "trans16",
+					"parent": "panel2",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-16, 0, -16],
+							"size": [32, 32, 0],
+							"uv": {
+								"north": {"uv": [32, 16], "uv_size": [-32, 32]},
+								"east": {"uv": [0, 2], "uv_size": [0, 45]},
+								"south": {"uv": [0, 16], "uv_size": [32, 32]},
+								"west": {"uv": [25, 2], "uv_size": [0, 45]},
+								"up": {"uv": [32, 2], "uv_size": [-32, 0]},
+								"down": {"uv": [32, 2], "uv_size": [-32, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "panel3",
+					"pivot": [0, 30, 0],
+					"rotation": [0, 180, 0]
+				},
+				{
+					"name": "trans32",
+					"parent": "panel3",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-16, 0, -16],
+							"size": [32, 32, 0],
+							"uv": {
+								"north": {"uv": [32, 16], "uv_size": [-32, 32]},
+								"east": {"uv": [0, 2], "uv_size": [0, 45]},
+								"south": {"uv": [0, 16], "uv_size": [32, 32]},
+								"west": {"uv": [25, 2], "uv_size": [0, 45]},
+								"up": {"uv": [32, 2], "uv_size": [-32, 0]},
+								"down": {"uv": [32, 2], "uv_size": [-32, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "panel4",
+					"pivot": [0, 30, 0],
+					"rotation": [0, 90, 0]
+				},
+				{
+					"name": "trans48",
+					"parent": "panel4",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-16, 0, -16],
+							"size": [32, 32, 0],
+							"uv": {
+								"north": {"uv": [32, 16], "uv_size": [-32, 32]},
+								"east": {"uv": [0, 2], "uv_size": [0, 45]},
+								"south": {"uv": [0, 16], "uv_size": [32, 32]},
+								"west": {"uv": [25, 2], "uv_size": [0, 45]},
+								"up": {"uv": [32, 2], "uv_size": [-32, 0]},
+								"down": {"uv": [32, 2], "uv_size": [-32, 0]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
