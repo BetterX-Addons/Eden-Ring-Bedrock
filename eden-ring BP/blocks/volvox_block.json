@@ -1,0 +1,36 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "edenring:volvox_block"
+        },
+        "components": {
+            // @edenring
+            "edenring:slime_block": {
+                "bound": 1.1
+            },
+            // @minecraft
+            "minecraft:friction": 0.7,
+            "minecraft:entity_fall_on": {
+                "min_fall_distance": 0
+            },
+            "minecraft:destructible_by_mining": true,
+            "minecraft:destructible_by_explosion": true,
+            "minecraft:flammable": false,
+            "minecraft:geometry": "geometry.minecraft:full_block",
+            "minecraft:material_instances": {
+                "*": {
+                    "ambient_occlusion": true,
+                    "face_dimming": true,
+                    "render_method": "blend",
+                    "texture": "volvox_block"
+                }
+            },
+            "minecraft:tags": [
+                "slime_block",
+                "bouncy",
+                "edenring"
+            ] 
+        }
+    }
+}
