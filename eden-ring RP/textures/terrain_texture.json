@@ -9,6 +9,20 @@
     // Air Ocean
     "volvox_block": {
       "textures": "textures/blocks/air_ocean/volvox_block"
+    },
+    "dense_volvox_block": {
+      "textures": {
+        "variations": [
+          {
+            "weight": 3,
+            "path": "textures/blocks/air_ocean/volvox_block_dense"
+          },
+          {
+            "weight": 1,
+            "path": "textures/blocks/air_ocean/volvox_block_dense_mossy"
+          }
+        ]
+      }
     }
   }
 }

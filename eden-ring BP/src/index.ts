@@ -90,10 +90,8 @@ system.runInterval(() => {
                 utils.teleportToEdenRing();
                 utils.applyEdenRingGravity();
             }
-            else {
-                const utils = new EntityUtils(entity);
-                utils.saveVelocity();
-            }
+            const utils = new EntityUtils(entity);
+            utils.saveVelocity();
         }
     });
 });

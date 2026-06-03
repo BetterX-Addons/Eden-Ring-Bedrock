@@ -11,8 +11,13 @@ export default class EntityUtils {
     }
 
     public saveVelocity(): void {
-        this.entity.setDynamicProperty("edenring:speed", this.entity.getVelocity());
-    }
+        const velocity = this.entity.getVelocity();
 
-    
+        if (velocity.y < 0) {
+            this.entity.setDynamicProperty(
+                "edenring:speedY",
+                velocity.y
+            );
+        }
+    }
 }

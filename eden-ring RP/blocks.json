@@ -5,5 +5,8 @@
   // Air Ocean
   "edenring:volvox_block": {
     "sound": "slime"
+  },
+  "edenring:dense_volvox_block": {
+    "sound": "slime"
   }
 }

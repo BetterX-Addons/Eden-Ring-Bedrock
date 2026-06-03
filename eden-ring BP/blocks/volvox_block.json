@@ -7,17 +7,17 @@
         "components": {
             // @edenring
             "edenring:slime_block": {
-                "bound": 1.1
+                "bound": 0.8
             },
             // @minecraft
-            "minecraft:friction": 0.7,
+            "minecraft:friction": 0.1,
             "minecraft:entity_fall_on": {
-                "min_fall_distance": 0
+                "min_fall_distance": 0.1
             },
             "minecraft:destructible_by_mining": true,
             "minecraft:destructible_by_explosion": true,
             "minecraft:flammable": false,
-            "minecraft:geometry": "geometry.minecraft:full_block",
+            "minecraft:geometry": "minecraft:geometry.full_block",
             "minecraft:material_instances": {
                 "*": {
                     "ambient_occlusion": true,
