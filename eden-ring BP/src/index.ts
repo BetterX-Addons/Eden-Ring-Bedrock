@@ -1,6 +1,7 @@
-import { world, system, Direction, CustomCommand, CommandPermissionLevel, CustomCommandParamType, CustomCommandOrigin, CustomCommandResult, CustomCommandStatus } from "@minecraft/server";
-import PlayerUtils from "./Utils/PlayerUtils";
-import ItemUtils from "./Utils/ItemUtils";
+import { world, system, Direction, CustomCommand, CommandPermissionLevel, CustomCommandParamType, CustomCommandOrigin, CustomCommandResult, CustomCommandStatus, Player } from "@minecraft/server";
+import PlayerUtils from "./utils/PlayerUtils";
+import EntityUtils from "./utils/EntityUtils";
+import ItemUtils from "./utils/ItemUtils";
 
 // ==========================================
 // CONSTANTS
@@ -9,16 +10,38 @@ import ItemUtils from "./Utils/ItemUtils";
 import { EdenRing } from "./constants/EdenRing";
 
 // ==========================================
+// COMPONENTS
+// ==========================================
+import { seedPlantComponent } from "components/SeedPlant";
+import { randomPlantComponent } from "components/RandomPlant";
+import { grassBlockComponent } from "components/GrassBlock";
+import { vineComponent } from "components/VineBlock";
+import { slimeBlockComponent } from "components/SlimeBlock";
+
+// ==========================================
 // REGISTRATION
 // ==========================================
 
 system.beforeEvents.startup.subscribe(e => {
     // ==========================================
+    // EDEN RING BLOCK COMPONENTS
+    // ==========================================
+
+    e.blockComponentRegistry.registerCustomComponent("betternether:growth", seedPlantComponent);
+    e.blockComponentRegistry.registerCustomComponent("betternether:random", randomPlantComponent);
+    e.blockComponentRegistry.registerCustomComponent("betternether:bone_meal_vegetation", grassBlockComponent);
+    e.blockComponentRegistry.registerCustomComponent("betternether:vine", vineComponent);
+
+    // ==========================================
+    // EDEN RING ITEM COMPONENTS
+    // ==========================================
+
+    // ==========================================
     // DEV COMMANDS
     // ==========================================
 
     // Despawn Command
-    const despawnCommand: CustomCommand = { name: 'eden_ring:despawn_all', description: "Despawn All Entities", permissionLevel: CommandPermissionLevel.Admin }
+    const despawnCommand: CustomCommand = { name: 'edenring:despawn_all', description: "Despawn All Entities", permissionLevel: CommandPermissionLevel.Admin }
     e.customCommandRegistry.registerCommand(despawnCommand, e => {
         system.run(() => {
             const entities = e.sourceEntity?.dimension.getEntities({ excludeTypes: ["minecraft:player"] });
@@ -30,7 +53,7 @@ system.beforeEvents.startup.subscribe(e => {
 
     // Teleport to Dimension
     const dimensionEnums: string[] = [ "overworld", "nether", "the_end", EdenRing.dimension ];
-    const teleportCommand: CustomCommand = { name: 'eden_ring:teleport_to', description: "Teleport to another dimension", permissionLevel: CommandPermissionLevel.Admin, mandatoryParameters: [ { type: CustomCommandParamType.Enum, name: EdenRing.dimension } ] }
+    const teleportCommand: CustomCommand = { name: 'edenring:teleport_to', description: "Teleport to another dimension", permissionLevel: CommandPermissionLevel.Admin, mandatoryParameters: [ { type: CustomCommandParamType.Enum, name: EdenRing.dimension } ] }
     e.customCommandRegistry.registerEnum(EdenRing.dimension, dimensionEnums);
     e.customCommandRegistry.registerCommand(teleportCommand, switchDimensionsCommand);
 
@@ -57,10 +80,21 @@ system.beforeEvents.startup.subscribe(e => {
 // ==========================================
 
 system.runInterval(() => {
-    for (const player of world.getPlayers()) {
-        const utils = new PlayerUtils(player);
-        utils.teleportToEdenRing();
-    }
+    const dimensions = [ "overworld", "the_end", "nether", "edenring:dimension" ]
+    .forEach(dimension => {
+        for (const entity of world.getDimension(dimension).getEntities()) {
+            if (entity instanceof Player) {
+                const player = entity;
+                const utils = new PlayerUtils(player);
+                utils.teleportToEdenRing();
+                utils.applyEdenRingGravity();
+            }
+            else {
+                const utils = new EntityUtils(entity);
+                utils.saveVelocity();
+            }
+        }
+    });
 });
 
 // ==========================================

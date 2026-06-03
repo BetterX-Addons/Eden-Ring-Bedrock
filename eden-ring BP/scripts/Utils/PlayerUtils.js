@@ -19,4 +19,20 @@ export default class PlayerUtils {
             this.player.setDynamicProperty(EdenRing.recently_teleported, false);
         }
     }
+    applyEdenRingGravity() {
+        if (this.dimension.id !== "edenring:dimension")
+            return;
+        if (this.player.isJumping) {
+            this.applyImpulseFromOrigin(0, 0.5, 0);
+        }
+        if (this.player.isFalling) {
+            this.applyImpulseFromOrigin(0, 0.2, 0);
+        }
+    }
+    applyImpulseFromOrigin(x, y, z) {
+        const { x: ox, y: oy, z: oz } = this.location;
+        this.player.applyImpulse({
+            x: ox + x, y: oy + y, z: oz + z
+        });
+    }
 }

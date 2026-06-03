@@ -13,7 +13,7 @@ system.beforeEvents.startup.subscribe(e => {
     // DEV COMMANDS
     // ==========================================
     // Despawn Command
-    const despawnCommand = { name: 'eden_ring:despawn_all', description: "Despawn All Entities", permissionLevel: CommandPermissionLevel.Admin };
+    const despawnCommand = { name: 'edenring:despawn_all', description: "Despawn All Entities", permissionLevel: CommandPermissionLevel.Admin };
     e.customCommandRegistry.registerCommand(despawnCommand, e => {
         system.run(() => {
             const entities = e.sourceEntity?.dimension.getEntities({ excludeTypes: ["minecraft:player"] });
@@ -24,7 +24,7 @@ system.beforeEvents.startup.subscribe(e => {
     });
     // Teleport to Dimension
     const dimensionEnums = ["overworld", "nether", "the_end", EdenRing.dimension];
-    const teleportCommand = { name: 'eden_ring:teleport_to', description: "Teleport to another dimension", permissionLevel: CommandPermissionLevel.Admin, mandatoryParameters: [{ type: CustomCommandParamType.Enum, name: EdenRing.dimension }] };
+    const teleportCommand = { name: 'edenring:teleport_to', description: "Teleport to another dimension", permissionLevel: CommandPermissionLevel.Admin, mandatoryParameters: [{ type: CustomCommandParamType.Enum, name: EdenRing.dimension }] };
     e.customCommandRegistry.registerEnum(EdenRing.dimension, dimensionEnums);
     e.customCommandRegistry.registerCommand(teleportCommand, switchDimensionsCommand);
     function switchDimensionsCommand(origin, dimensionId) {

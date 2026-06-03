@@ -1,5 +1,7 @@
 export const EdenRing = {
-    dimension: "eden_ring:dimension",
-    portal: "eden_ring:portal",
-    recently_teleported: "eden_ring:recently_teleported"
+    dimension: "edenring:dimension",
+    portal: "edenring:portal",
+    recently_teleported: "edenring:recently_teleported",
+    gravityJumping: 1.5,
+    gravityFalling: 0.8
 }
