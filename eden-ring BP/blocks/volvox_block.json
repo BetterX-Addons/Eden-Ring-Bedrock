@@ -26,11 +26,9 @@
                     "texture": "volvox_block"
                 }
             },
-            "minecraft:tags": [
-                "slime_block",
-                "bouncy",
-                "edenring"
-            ] 
+            "tag:slime_block": {},
+            "tag:bouncy": {},
+            "tag:edenring": {}
         }
     }
 }
