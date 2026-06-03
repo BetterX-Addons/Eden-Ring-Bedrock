@@ -1,14 +1,34 @@
-import { world, system, CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus } from "@minecraft/server";
-import PlayerUtils from "./Utils/PlayerUtils";
-import ItemUtils from "./Utils/ItemUtils";
+import { world, system, CommandPermissionLevel, CustomCommandParamType, CustomCommandStatus, Player } from "@minecraft/server";
+import PlayerUtils from "./utils/PlayerUtils";
+import EntityUtils from "./utils/EntityUtils";
+import ItemUtils from "./utils/ItemUtils";
 // ==========================================
 // CONSTANTS
 // ==========================================
 import { EdenRing } from "./constants/EdenRing";
 // ==========================================
+// COMPONENTS
+// ==========================================
+import { seedPlantComponent } from "components/SeedPlant";
+import { randomPlantComponent } from "components/RandomPlant";
+import { grassBlockComponent } from "components/GrassBlock";
+import { vineComponent } from "components/VineBlock";
+import { slimeBlockComponent } from "components/SlimeBlock";
+// ==========================================
 // REGISTRATION
 // ==========================================
 system.beforeEvents.startup.subscribe(e => {
+    // ==========================================
+    // EDEN RING BLOCK COMPONENTS
+    // ==========================================
+    e.blockComponentRegistry.registerCustomComponent("edenring:growth", seedPlantComponent);
+    e.blockComponentRegistry.registerCustomComponent("edenring:random", randomPlantComponent);
+    e.blockComponentRegistry.registerCustomComponent("edenring:bone_meal_vegetation", grassBlockComponent);
+    e.blockComponentRegistry.registerCustomComponent("edenring:vine", vineComponent);
+    e.blockComponentRegistry.registerCustomComponent("edenring:slime_block", slimeBlockComponent);
+    // ==========================================
+    // EDEN RING ITEM COMPONENTS
+    // ==========================================
     // ==========================================
     // DEV COMMANDS
     // ==========================================
@@ -46,10 +66,21 @@ system.beforeEvents.startup.subscribe(e => {
 // TICKING
 // ==========================================
 system.runInterval(() => {
-    for (const player of world.getPlayers()) {
-        const utils = new PlayerUtils(player);
-        utils.teleportToEdenRing();
-    }
+    const dimensions = ["overworld", "the_end", "nether", "edenring:dimension"]
+        .forEach(dimension => {
+        for (const entity of world.getDimension(dimension).getEntities()) {
+            if (entity instanceof Player) {
+                const player = entity;
+                const utils = new PlayerUtils(player);
+                utils.teleportToEdenRing();
+                utils.applyEdenRingGravity();
+            }
+            else {
+                const utils = new EntityUtils(entity);
+                utils.saveVelocity();
+            }
+        }
+    });
 });
 // ==========================================
 // WORLD EVENTS

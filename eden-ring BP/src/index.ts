@@ -27,10 +27,11 @@ system.beforeEvents.startup.subscribe(e => {
     // EDEN RING BLOCK COMPONENTS
     // ==========================================
 
-    e.blockComponentRegistry.registerCustomComponent("betternether:growth", seedPlantComponent);
-    e.blockComponentRegistry.registerCustomComponent("betternether:random", randomPlantComponent);
-    e.blockComponentRegistry.registerCustomComponent("betternether:bone_meal_vegetation", grassBlockComponent);
-    e.blockComponentRegistry.registerCustomComponent("betternether:vine", vineComponent);
+    e.blockComponentRegistry.registerCustomComponent("edenring:growth", seedPlantComponent);
+    e.blockComponentRegistry.registerCustomComponent("edenring:random", randomPlantComponent);
+    e.blockComponentRegistry.registerCustomComponent("edenring:bone_meal_vegetation", grassBlockComponent);
+    e.blockComponentRegistry.registerCustomComponent("edenring:vine", vineComponent);
+    e.blockComponentRegistry.registerCustomComponent("edenring:slime_block", slimeBlockComponent)
 
     // ==========================================
     // EDEN RING ITEM COMPONENTS
