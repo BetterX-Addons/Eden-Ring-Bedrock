@@ -34,13 +34,16 @@
             }
         ],
         "components": {
+            "minecraft:loot": "loot_tables/blocks/brainstorm/copper_brain_tree_block.json",
             "minecraft:flammable": false,
             "minecraft:destructible_by_explosion": {
-                "explosion_resistance": 1
+                "explosion_resistance": 5
             },
             "minecraft:destructible_by_mining": {
-                "seconds_to_destroy": 1
-            }
+                "seconds_to_destroy": 5
+            },
+            "tag:minecraft:is_pickaxe_item_destructible": {},
+            "tag:stone": {}
         }
     }
 }
