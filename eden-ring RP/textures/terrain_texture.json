@@ -7,6 +7,32 @@
     // Eden Ring
 
     // Air Ocean
+    "parignum": {
+      "textures": {
+        "variations": [
+          {
+            "weight": 1,
+            "path": "textures/blocks/air_ocean/parignum"
+          },
+          {
+            "weight": 1,
+            "path": "textures/blocks/air_ocean/parignum1"
+          },
+          {
+            "weight": 1,
+            "path": "textures/blocks/air_ocean/parignum2"
+          },
+          {
+            "weight": 1,
+            "path": "textures/blocks/air_ocean/parignum3"
+          },
+          {
+            "weight": 1,
+            "path": "textures/blocks/air_ocean/parignum4"
+          }
+        ]
+      }
+    },
     "emissive_symbiotic_mold": {
       "textures": "textures/blocks/air_ocean/symbiotic_mold_emissive"
     },
