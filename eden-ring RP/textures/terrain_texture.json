@@ -7,6 +7,9 @@
     // Eden Ring
 
     // Air Ocean
+    "emissive_symbiotic_mold": {
+      "textures": "textures/blocks/air_ocean/symbiotic_mold_emissive"
+    },
     "symbiotic_mold": {
       "textures": "textures/blocks/air_ocean/symbiotic_mold"
     },
