@@ -11,7 +11,8 @@
                     "texture": "symbiotic_mold",
                     "render_method": "alpha_test_single_sided",
                     "face_dimming": true,
-                    "ambient_occlusion": true
+                    "ambient_occlusion": true,
+                    "emissive": true
                 }
             },
             "minecraft:placement_filter": {
