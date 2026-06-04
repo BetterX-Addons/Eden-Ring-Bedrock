@@ -6,6 +6,32 @@
   "texture_data": {
     // Eden Ring
 
+    // Brainstorm
+    "brain_tree_log_side": {
+      "textures": "textures/blocks/brainstorm/brain_tree_log_side"
+    },
+    "brain_tree_log_top": {
+      "textures": "textures/blocks/brainstorm/brain_tree_log_top"
+    },
+    "copper_brain_tree_block": {
+      "textures": "textures/blocks/brainstorm/brain_tree_block_copper"
+    },
+    "copper_brain_tree_block_active": {
+      "textures": "textures/blocks/brainstorm/brain_tree_block_copper_active"
+    },
+    "gold_brain_tree_block": {
+      "textures": "textures/blocks/brainstorm/brain_tree_block_gold"
+    },
+    "gold_brain_tree_block_active": {
+      "textures": "textures/blocks/brainstorm/brain_tree_block_gold_active"
+    },
+    "iron_brain_tree_block": {
+      "textures": "textures/blocks/brainstorm/brain_tree_block_iron"
+    },
+    "iron_brain_tree_block_active": {
+      "textures": "textures/blocks/brainstorm/brain_tree_block_iron_active"
+    },
+
     // Air Ocean
     "parignum": {
       "textures": {

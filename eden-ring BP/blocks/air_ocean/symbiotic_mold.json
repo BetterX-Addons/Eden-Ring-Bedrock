@@ -2,13 +2,13 @@
     "format_version": "1.26.0",
     "minecraft:block": {
         "description": {
-            "identifier": "edenring:emissive_symbiotic_mold"
+            "identifier": "edenring:symbiotic_mold"
         },
         "components": {
             "minecraft:geometry": "geometry.symbiotic_mold",
             "minecraft:material_instances": {
                 "*": {
-                    "texture": "emissive_symbiotic_mold",
+                    "texture": "symbiotic_mold",
                     "render_method": "alpha_test_single_sided",
                     "face_dimming": true,
                     "ambient_occlusion": true,
@@ -33,6 +33,8 @@
                     180, 0, 0
                 ]
             },
+            "minecraft:destructible_by_explosion": true,
+            "minecraft:destructible_by_mining": true,
             "minecraft:collision_box": false,
             "minecraft:selection_box": {
                 "origin": [

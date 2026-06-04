@@ -14,5 +14,10 @@
   },
   "edenring:parignum": {
     "sound": "roots"
+  },
+
+  // Brainstorm
+  "edenring:copper_brain_tree_block": {
+    "sound": "copper"
   }
 }

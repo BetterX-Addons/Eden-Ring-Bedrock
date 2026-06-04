@@ -95,6 +95,8 @@
                     "ambient_occlusion": true
                 }
             },
+            "minecraft:destructible_by_mining": true,
+            "minecraft:destructible_by_explosion": true,
             "minecraft:collision_box": false,
             "minecraft:selection_box": {
                 "origin": [

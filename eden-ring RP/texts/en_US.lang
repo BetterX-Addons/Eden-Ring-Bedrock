@@ -8,3 +8,7 @@ tile.edenring:symbiotic_mold=Symbiotic Mold
 tile.edenring:emissive_symbiotic_mold=Emissive Symbiotic Mold
 tile.edenring:parignum=Parignum
 tile.edenring:eden_vine=Eden Vine
+
+## Brainstorm
+
+tile.edenring:copper_brain_tree_block=Copper Brain Tree Block

@@ -1,0 +1,46 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "edenring:copper_brain_tree_block",
+            "states": {
+                "edenring:active": [
+                    false, true
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "!q.block_state('edenring:active')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "copper_brain_tree_block",
+                            "render_method": "opaque"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('edenring:active')",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "copper_brain_tree_block_active",
+                            "render_method": "opaque"
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "minecraft:flammable": false,
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 1
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            }
+        }
+    }
+}
