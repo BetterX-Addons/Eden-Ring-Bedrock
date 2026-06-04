@@ -25,7 +25,7 @@
                 "*": {
                     "ambient_occlusion": true,
                     "face_dimming": true,
-                    "render_method": "blend",
+                    "render_method": "blend_to_opaque",
                     "texture": "volvox_block"
                 }
             },
