@@ -20,8 +20,6 @@
             "minecraft:geometry": "minecraft:geometry.full_block",
             "minecraft:material_instances": {
                 "*": {
-                    "ambient_occlusion": true,
-                    "face_dimming": true,
                     "render_method": "opaque",
                     "texture": "dense_volvox_block"
                 }
