@@ -11,5 +11,8 @@
   },
   "edenring:symbiotic_mold": {
     "sound": "roots"
+  },
+  "edenring:parignum": {
+    "sound": "roots"
   }
 }
