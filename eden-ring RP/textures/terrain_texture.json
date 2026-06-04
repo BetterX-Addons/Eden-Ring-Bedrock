@@ -7,6 +7,9 @@
     // Eden Ring
 
     // Air Ocean
+    "symbiotic_mold": {
+      "textures": "textures/blocks/air_ocean/symbiotic_mold"
+    },
     "volvox_block": {
       "textures": "textures/blocks/air_ocean/volvox_block"
     },

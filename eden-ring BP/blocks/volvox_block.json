@@ -17,7 +17,10 @@
             "minecraft:destructible_by_mining": true,
             "minecraft:destructible_by_explosion": true,
             "minecraft:flammable": false,
-            "minecraft:geometry": "minecraft:geometry.full_block",
+            "minecraft:geometry": {
+                "identifier": "minecraft:geometry.full_block",
+                "culling": "edenring:volvox_block_culling"
+            },
             "minecraft:material_instances": {
                 "*": {
                     "ambient_occlusion": true,

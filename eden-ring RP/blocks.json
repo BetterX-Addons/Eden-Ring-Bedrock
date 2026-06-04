@@ -8,5 +8,8 @@
   },
   "edenring:dense_volvox_block": {
     "sound": "slime"
+  },
+  "edenring:symbiotic_mold": {
+    "sound": "roots"
   }
 }

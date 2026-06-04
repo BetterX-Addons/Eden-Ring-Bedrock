@@ -12,7 +12,7 @@
             // @minecraft
             "minecraft:friction": 0.1,
             "minecraft:entity_fall_on": {
-                "min_fall_distance": 0.1
+                "min_fall_distance": 0
             },
             "minecraft:destructible_by_mining": true,
             "minecraft:destructible_by_explosion": true,
@@ -22,7 +22,7 @@
                 "*": {
                     "ambient_occlusion": true,
                     "face_dimming": true,
-                    "render_method": "blend",
+                    "render_method": "opaque",
                     "texture": "dense_volvox_block"
                 }
             },
