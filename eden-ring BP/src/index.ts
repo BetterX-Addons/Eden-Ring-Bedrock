@@ -86,7 +86,7 @@ system.beforeEvents.startup.subscribe(e => {
 // ==========================================
 
 system.runInterval(() => {
-    const dimensions = [ "overworld", "the_end", "nether", "edenring:dimension" ]
+    [ "overworld", "the_end", "nether", "edenring:dimension" ]
     .forEach(dimension => {
         for (const entity of world.getDimension(dimension).getEntities()) {
             if (entity instanceof Player) {
