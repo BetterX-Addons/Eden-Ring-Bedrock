@@ -12,3 +12,9 @@ tile.edenring:eden_vine=Eden Vine
 ## Brainstorm
 
 tile.edenring:copper_brain_tree_block=Copper Brain Tree Block
+tile.edenring:iron_brain_tree_block=Iron Brain Tree Block
+tile.edenring:gold_brain_tree_block=Gold Brain Tree Block
+tile.edenring:brain_tree_stripped_bark=Brain Tree Stripped Bark
+tile.edenring:brain_tree_bark=Brain Tree Bark
+tile.edenring:brain_tree_log=Brain Tree Log
+tile.edenring:brain_tree_stripped_log=Brain Tree Stripped Log

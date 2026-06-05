@@ -7,6 +7,12 @@
     // Eden Ring
 
     // Brainstorm
+    "brain_tree_stripped_log_side": {
+      "textures": "textures/blocks/brainstorm/brain_tree_stripped_log_side"
+    },
+    "brain_tree_stripped_log_top": {
+      "textures": "textures/blocks/brainstorm/brain_tree_stripped_log_top"
+    },
     "brain_tree_log_side": {
       "textures": "textures/blocks/brainstorm/brain_tree_log_side"
     },

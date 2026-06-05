@@ -19,5 +19,23 @@
   // Brainstorm
   "edenring:copper_brain_tree_block": {
     "sound": "copper"
+  },
+  "edenring:iron_brain_tree_block": {
+    "sound": "copper"
+  },
+  "edenring:gold_brain_tree_block": {
+    "sound": "copper"
+  },
+  "edenring:brain_tree_bark": {
+    "sound": "wood"
+  },
+  "edenring:brain_tree_log": {
+    "sound": "wood"
+  },
+  "edenring:brain_tree_stripped_bark": {
+    "sound": "wood"
+  },
+  "edenring:brain_tree_stripped_log": {
+    "sound": "wood"
   }
 }

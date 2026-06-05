@@ -19,6 +19,11 @@ import { vineComponent } from "components/VineBlock";
 import { slimeBlockComponent } from "components/SlimeBlock";
 
 // ==========================================
+// WOOD SETS
+// ==========================================
+import "woodset/WoodSet";
+
+// ==========================================
 // REGISTRATION
 // ==========================================
 

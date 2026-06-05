@@ -1,0 +1,9 @@
+import "woodset/button";
+import "woodset/door";
+import "woodset/fence_gate";
+import "woodset/log";
+import "woodset/pressure_plate";
+import "woodset/signs";
+import "woodset/slab";
+import "woodset/stairs";
+import "woodset/trapdoor";
