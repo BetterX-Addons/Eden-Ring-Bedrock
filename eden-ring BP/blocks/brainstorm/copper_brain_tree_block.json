@@ -13,6 +13,7 @@
             {
                 "condition": "!q.block_state('edenring:active')",
                 "components": {
+                    "minecraft:geometry": "geometry.volvox_block",
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "copper_brain_tree_block",
@@ -24,6 +25,7 @@
             {
                 "condition": "q.block_state('edenring:active')",
                 "components": {
+                    "minecraft:geometry": "geometry.volvox_block",
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "copper_brain_tree_block_active",

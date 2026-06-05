@@ -18,7 +18,7 @@
             "minecraft:destructible_by_explosion": true,
             "minecraft:flammable": false,
             "minecraft:geometry": {
-                "identifier": "minecraft:geometry.full_block",
+                "identifier": "geometry.volvox_block",
                 "culling": "edenring:volvox_block_culling"
             },
             "minecraft:material_instances": {

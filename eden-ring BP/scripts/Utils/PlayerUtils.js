@@ -22,17 +22,16 @@ export default class PlayerUtils {
     applyEdenRingGravity() {
         if (this.dimension.id !== "edenring:dimension")
             return;
-        if (this.player.isJumping) {
-            this.applyImpulseFromOrigin(0, 0.5, 0);
+        const jumpFlag = this.player.getDynamicProperty('edenring:jump_flag');
+        if (this.player.isJumping && !jumpFlag) {
+            this.player.setDynamicProperty('edenring:jump_flag', true);
+            this.player.applyImpulse({ x: 0, y: 0.1, z: 0 });
+        }
+        if (this.player.isOnGround) {
+            this.player.setDynamicProperty('edenring:jump_flag', false);
         }
         if (this.player.isFalling) {
-            this.applyImpulseFromOrigin(0, 0.2, 0);
+            this.player.applyImpulse({ x: 0, y: 0.03, z: 0 });
         }
-    }
-    applyImpulseFromOrigin(x, y, z) {
-        const { x: ox, y: oy, z: oz } = this.location;
-        this.player.applyImpulse({
-            x: ox + x, y: oy + y, z: oz + z
-        });
     }
 }

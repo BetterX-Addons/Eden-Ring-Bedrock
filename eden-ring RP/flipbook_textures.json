@@ -2,8 +2,7 @@
     {
         "atlas_tile": "copper_brain_tree_block_active",
         "flipbook_texture": "textures/blocks/brainstorm/brain_tree_block_copper_active",
-        "ticks_per_frame": 10,
-        "blend_frames": false
+        "ticks_per_frame": 10
     },
     {
         "atlas_tile": "gold_brain_tree_block_active",
