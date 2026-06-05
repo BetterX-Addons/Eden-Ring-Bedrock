@@ -1,0 +1,65 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "edenring:brain_tree_stripped_log",
+      "traits": {
+        "minecraft:placement_position": {
+          "enabled_states": [ "minecraft:block_face" ]
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('minecraft:block_face') == 'north' || query.block_state('minecraft:block_face') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 90, 0, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:block_face') == 'east' || query.block_state('minecraft:block_face') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 0, 90 ]
+          }
+        }
+      }
+    ],
+    "components": {
+      "minecraft:map_color": "#6d3028",
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "brain_tree_stripped_log_side",
+          "render_method": "opaque"
+        },
+        "up": {
+          "texture": "brain_tree_stripped_log_top",
+          "render_method": "opaque"
+        },
+        "down": {
+          "texture": "brain_tree_stripped_log_top",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:flammable": {
+        "destroy_chance_modifier": 5,
+        "catch_chance_modifier": 5
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1.75
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 15
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": true,
+        "redstone_conductor": true
+      },
+      "tag:minecraft:is_axe_item_destructible": {},
+      "tag:wood": {}
+    }
+  }
+}
