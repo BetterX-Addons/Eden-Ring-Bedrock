@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.default_player.eden_ring_skybox": {
+			"loop": true,
+			"animation_length": 0.95,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "planet"
+					},
+					{
+						"effect": "planet_ring_soft"
+					}
+				]
+			}
+		}
+	}
+}
