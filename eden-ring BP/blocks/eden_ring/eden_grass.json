@@ -1,0 +1,354 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "edenring:eden_grass",
+            "states": {
+                "edenring:biome": [
+                    "air_ocean",
+                    "brainstorm",
+                    "empty_cave",
+                    "eroded_cave",
+                    "golden_forest",
+                    "lakeside_desert",
+                    "mycotic_forest",
+                    "old_mycotic_forest",
+                    "pulse_forest",
+                    "sky_colony",
+                    "stone_garden",
+                    "wind_valley"
+                ]
+            }
+        },
+
+        "permutations": [
+            {
+                "condition": "q.block_state('edenring:biome') === 'air_ocean'",
+                "components": {
+                    "tag:air_ocean": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_air_ocean_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_air_ocean_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'brainstorm'",
+                "components": {
+                    "tag:brainstorm": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_brainstorm_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_brainstorm_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'empty_cave'",
+                "components": {
+                    "tag:empty_cave": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_empty_cave_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_empty_cave_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'eroded_cave'",
+                "components": {
+                    "tag:eroded_cave": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_eroded_cave_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_eroded_cave_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'golden_forest'",
+                "components": {
+                    "tag:golden_forest": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_golden_forest_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_golden_forest_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'lakeside_desert'",
+                "components": {
+                    "tag:lakeside_desert": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_lakeside_desert_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_lakeside_desert_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'mycotic_forest'",
+                "components": {
+                    "tag:mycotic_forest": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_mycotic_forest_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_mycotic_forest_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'old_mycotic_forest'",
+                "components": {
+                    "tag:old_mycotic_forest": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_old_mycotic_forest_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_old_mycotic_forest_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'pulse_forest'",
+                "components": {
+                    "tag:pulse_forest": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_pulse_forest_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_pulse_forest_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'sky_colony'",
+                "components": {
+                    "tag:sky_colony": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_sky_colony_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_sky_colony_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'stone_garden'",
+                "components": {
+                    "tag:stone_garden": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_stone_garden_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_stone_garden_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            },
+
+            {
+                "condition": "q.block_state('edenring:biome') === 'wind_valley'",
+                "components": {
+                    "tag:wind_valley": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "eden_grass_wind_valley_side",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "down": {
+                            "texture": "dirt",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        },
+                        "up": {
+                            "texture": "eden_grass_wind_valley_top",
+                            "render_method": "opaque",
+                            "ambient_occlusion": true,
+                            "face_dimming": true
+                        }
+                    }
+                }
+            }
+        ],
+
+        "components": {
+            "minecraft:geometry": "minecraft:geometry.full_block"
+        }
+    }
+}
