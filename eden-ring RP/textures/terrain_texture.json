@@ -5,6 +5,73 @@
   "texture_name": "atlas.terrain",
   "texture_data": {
     // Eden Ring
+    
+    "eden_grass_brainstorm_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_brainstorm_side"
+    },
+    "eden_grass_brainstorm_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_brainstorm_top"
+    },
+    "eden_grass_empty_cave_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_empty_cave_side"
+    },
+    "eden_grass_empty_cave_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_empty_cave_top"
+    },
+    "eden_grass_eroded_cave_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_eroded_cave_side"
+    },
+    "eden_grass_eroded_cave_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_eroded_cave_top"
+    },
+    "eden_grass_golden_forest_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_golden_forest_side"
+    },
+    "eden_grass_golden_forest_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_golden_forest_top"
+    },
+    "eden_grass_lakeside_desert_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_lakeside_desert_side"
+    },
+    "eden_grass_lakeside_desert_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_lakeside_desert_top"
+    },
+    "eden_grass_mycotic_forest_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_mycotic_forest_side"
+    },
+    "eden_grass_mycotic_forest_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_mycotic_forest_top"
+    },
+    "eden_grass_old_mycotic_forest_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_old_mycotic_forest_side"
+    },
+    "eden_grass_old_mycotic_forest_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_old_mycotic_forest_top"
+    },
+    "eden_grass_pulse_forest_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_pulse_forest_side"
+    },
+    "eden_grass_pulse_forest_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_pulse_forest_top"
+    },
+    "eden_grass_sky_colony_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_sky_colony_side"
+    },
+    "eden_grass_sky_colony_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_sky_colony_top"
+    },
+    "eden_grass_stone_garden_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_stone_garden_side"
+    },
+    "eden_grass_stone_garden_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_stone_garden_top"
+    },
+    "eden_grass_wind_valley_side": {
+      "textures": "textures/blocks/eden_ring/eden_grass_wind_valley_side"
+    },
+    "eden_grass_wind_valley_top": {
+      "textures": "textures/blocks/eden_ring/eden_grass_wind_valley_top"
+    },
 
     // Brainstorm
     "brain_tree_stripped_log_side": {
@@ -37,7 +104,6 @@
     "iron_brain_tree_block_active": {
       "textures": "textures/blocks/brainstorm/brain_tree_block_iron_active"
     },
-
     // Air Ocean
     "parignum": {
       "textures": {
